@@ -329,6 +329,13 @@ $width: 100%;
         color: $green;
         background-color: transparent;
         @include radius(5px);
+        
+        @media screen and (min-width: 500px) {
+            button {
+                width: 210px;
+                padding: 10px;
+            }
+        }
     }
     
     .btn-2 {
