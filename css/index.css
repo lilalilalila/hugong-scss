@@ -236,6 +236,13 @@
   border-radius: 5px;
 }
 
+@media screen and (min-width: 500px) {
+  .footer button {
+    width: 210px;
+    padding: 10px;
+  }
+}
+
 .footer .btn-2 {
   color: #fff;
   background-color: #5fc0cd;
