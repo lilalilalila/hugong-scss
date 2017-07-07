@@ -1,0 +1,7 @@
+//顶部背景
+@mixin header-bg {
+    width: $width;
+    
+    color: $white;
+    background-color: $green;
+}

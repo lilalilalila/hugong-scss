@@ -1,0 +1,180 @@
+@import 'scss/can-shu';
+@import 'scss/header-bg';
+@import 'scss/position-absolute';
+@import 'scss/tong-yong';
+@import 'scss/radius';
+@import 'scss/bg-image';
+@import 'scss/clear';
+@import 'scss/font-family';
+
+.header {
+    line-height: $line-h;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    
+    img {
+        position: absolute;
+        right: 0;
+        top: 7px;
+        
+        margin-right: 10px;
+        width: 28px;
+        height: 30px;
+    }
+    
+    button {
+        width: 80px;
+        padding: 10px 10px;
+        margin-left: -10px;
+        color: $white;
+        background-color: $btn-bgcolor;
+        border: none;
+        @include radius(
+            $radius: 5px);
+    }
+    
+    .header-btn {
+        color: $green;
+        background-color: $white;
+    }
+    
+    @include header-bg;
+}
+
+
+.header-nav {
+    width: $width;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-hui;
+    margin-top: $line-h;
+    
+    .drop-down {
+        width: $width;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: $line-h;
+        color: $font-hui;
+        background-color: transparent;
+        list-style: none;
+    
+    
+        .nav-border {
+            border-left: 1px solid $border-hui;
+            border-right: 1px solid $border-hui;
+        }
+    
+        > li {
+            position: relative;
+            width: 28%;
+            line-height: $line-h;
+            padding: 0 2.1%;
+            float: left;
+            
+            &:hover .drop-down-content{
+                display: block;
+            }
+            
+            .drop-down-content {
+                display: none;
+                width: $width;
+                list-style: none;
+                position: absolute;
+                top: 3rem;
+            }    
+        }
+    
+        a {
+            display: block;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            color: $font-hui;
+            background-image: url(../img/images/t_03.png);
+            @include bg-img(
+                $bg-s-x: 10px,
+                $bg-s-y: 6px,
+                $bg-p: right);
+        }
+    }
+    @include clear('.drop-down');
+}
+
+.main-content {
+    width: $width;
+    margin-bottom: 3rem;
+    
+    .p1 {
+        background-image: url(../img/images/task5-2_07.jpg);
+    }
+    
+    .p2 {
+        background-image: url(../img/images/task5-2_11.jpg);
+    }
+    
+    p {
+        font-size: 0.8rem;
+        padding: 3px 20px;
+        margin-left: 10px;
+        color: $font-hui;
+        @include bg-img(
+            $bg-s-x: 13px,
+            $bg-s-y: 13px,
+            $bg-p: left);
+    }
+    
+    span {
+        margin-left: 30px; 
+    }
+    
+    .span-red {
+        float: right;
+        
+        margin-right: 10px;
+        margin-left: 0;
+        padding-right: 20px;
+        color: $red;
+        background-image: url(../img/images/task03.png);
+        @include bg-img(
+            $bg-s-x: 10px,
+            $bg-s-y: 16px,
+            $bg-p: right);
+    }
+    
+    a {
+        text-decoration: none;
+        color: #000000;
+        
+        > div {
+            padding: 10px 0;
+            width: $width;
+            border-bottom: 1px solid $border-hui;
+            
+            &:after {
+                @include clear-a;
+        }    
+    }
+    }
+}
+
+.footer-content {
+    position: fixed;
+    bottom: 0;
+    width: $width;
+    text-align: center;
+    padding: 2px 0;
+    background-color: $footer-bgcolor;
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .a2 {
+        margin: 0 9%;
+    }
+    
+    img  {
+        vertical-align: middle;
+    }
+    
+}
