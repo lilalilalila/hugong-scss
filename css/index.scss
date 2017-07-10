@@ -75,7 +75,7 @@ $width: 100%;
     #{$mask-name}:before {
         content: '';
         display: block;
-        width: 1000px;
+        width: 100%;
         height: 1000px;
         position: absolute;
         top: 0;
@@ -168,25 +168,15 @@ $width: 100%;
             color: $white;
         }
         
+        @media screen and (min-width: 500px) {
+            & {
+                height: 300px;
+            }
+        }
+        
         > img {
             width: $width;
             z-index: 1;
-            
-            &:after {
-                content: '';
-                position: absolute;
-                z-index: 100;
-                display: block;
-                width: $width;
-                height: 500px;
-                opacity: 0.7;
-                background-color: #000;
-            }
-            
-            @media screen and (min-width: 727px) {
-                width: 727px;
-                height: 493px;
-            }
         }
         
         > div {
@@ -210,14 +200,24 @@ $width: 100%;
                 top: -40px;
                 left: -199px;
             }    
+            @media screen and (min-width: 500px) {
+                & {
+                    margin: 0 30px;
+                }
+            }
         }
         
         .head-name {
             top: 36%;
-            left: 40%;
+            left: 150px;
             width: 60%;
             font-size: 0.9rem;
             
+            @media screen and (min-width: 500px) {
+                & {
+                    left: 180px;
+                }
+            }
             
             span {
                 font-size: 1.1rem;
