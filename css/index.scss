@@ -150,6 +150,7 @@ $width: 100%;
     width: $width;
     position: relative;
     margin-top: $line-h;
+    margin-bottom: $line-h;
     
     .p-color {
         color: $font-hui; 
@@ -317,8 +318,12 @@ $width: 100%;
 }
 
 .footer {
+    width: $width;
     text-align: center;
     padding: 15% 0 2% 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999999;
     
     button {
         padding: 2% 0;
